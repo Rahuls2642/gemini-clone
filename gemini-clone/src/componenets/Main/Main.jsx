@@ -40,7 +40,15 @@ const {onSent,recentPrompt,showResult,loading,resultData,setInput,input}=useCont
                 </div>
                 <div className="result-data">
                     <img src={assets.gemini_icon} alt="" />
-                    <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+                    {loading
+                    ?<div className='loader'>
+                        <hr />
+                        <hr />
+                        <hr />
+
+                    </div>: <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+                }
+                   
                 </div>
                 </div>}
             
@@ -54,7 +62,7 @@ const {onSent,recentPrompt,showResult,loading,resultData,setInput,input}=useCont
                     </div>
                 </div>
                 <p className="bottom-info">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus exercitationem minima, vero commodi in vel perspiciatis, accusamus laudantium recusandae voluptatum reiciendis quidem illo porro impedit officia, consequuntur labore eius officiis.
+                    Google Gemini is Google's most capable and general AI model. It's designed to be multimodal from the ground up, meaning it can natively understand and operate across different types of information, like text, code, audio, images, and video. Here's a breakdown of key aspects of Gemini:
                 </p>
             </div>
         </div>
